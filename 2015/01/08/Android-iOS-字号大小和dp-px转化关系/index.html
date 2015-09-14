@@ -5,22 +5,16 @@
   
   <title>Android iOS 字号大小和dp,px转化关系 | ValuesFeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android iOS 字号大小和dp,px转化关系
-ps,pt,dp,sp转换
-上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。">
+  <meta name="description" content="ps,pt,dp,sp转换上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android iOS 字号大小和dp,px转化关系">
-<meta property="og:url" content="http://valuesfeng.github.io/2015/01/08/Android-iOS-字号大小和dp-px转化关系/">
+<meta property="og:url" content="http://valuesfeng.github.io/2015/01/08/Android-iOS-字号大小和dp-px转化关系/index.html">
 <meta property="og:site_name" content="ValuesFeng">
-<meta property="og:description" content="Android iOS 字号大小和dp,px转化关系
-ps,pt,dp,sp转换
-上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。">
+<meta property="og:description" content="ps,pt,dp,sp转换上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。">
+<meta property="og:updated_time" content="2015-09-14T09:22:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android iOS 字号大小和dp,px转化关系">
-<meta name="twitter:description" content="Android iOS 字号大小和dp,px转化关系
-ps,pt,dp,sp转换
-上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。">
-
+<meta name="twitter:description" content="ps,pt,dp,sp转换上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。">
   
     <link rel="alternative" href="/atom.xml" title="ValuesFeng" type="application/atom+xml">
   
@@ -28,7 +22,6 @@ ps,pt,dp,sp转换
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
-
   
 
   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
@@ -191,11 +184,11 @@ ps,pt,dp,sp转换
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Android_iOS_字号大小和dp,px转化关系">Android iOS 字号大小和dp,px转化关系</h2>
-<h4 id="ps,pt,dp,sp转换">ps,pt,dp,sp转换</h4>
-<p>上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。<br><a id="more"></a><br>一般ios算坐标的时候，ui给的设计图一般是px值，在iOS上面对应的需要除2来计算左边，说白了，ios 的计算是按照320*480来算的。</p>
+        <h3 id="ps,pt,dp,sp转换">ps,pt,dp,sp转换</h3><p>上网查了公式说明 ios 的字体 和photoshop  的pt转换关系，都是一些鸡肋，实际UI设计的时候，给出的效果图，一般都是直接看ps上面的字号来的。<br><a id="more"></a><br>一般ios算坐标的时候，ui给的设计图一般是px值，在iOS上面对应的需要除2来计算左边，说白了，ios 的计算是按照320*480来算的。  </p>
+<p>关于dp与dpi等概念，请参考文章：<a href="http://www.zhihu.com/question/19625584" target="_blank" rel="external">http://www.zhihu.com/question/19625584</a></p>
 <p>如果UI设计的文档的PPI是72的，那么UI给的字体24点就要对应的除2，就是ios的字号，如果PPI是144的，那么给ios的pt字体就是12点。同样，适配于android 的dp 和 sp。</p>
-<p>UI给的设计效果的px,转换到ios和android 的dp见<br>An <a href="http://user.qzone.qq.com/358958028/blog/1407069124" target="_blank" rel="external">http://user.qzone.qq.com/358958028/blog/1407069124</a></p>
+<h3 id="UI给的设计效果的px,转换到ios和android:">UI给的设计效果的px,转换到ios和android:</h3><p>  我们以480 x 800像素尺寸下做的设计图为基准。开发将部件尺寸换算成dp尺寸的方法是，像素尺寸  x   2/3。这也是为什么要让Android部件尺寸能让3整除的原因。所以在hdpi模式，480 x 800像素尺寸设计图中，开发看到300px宽度的标注，会定义其为宽200dp，到这里Android开发才得到一个他们真正会用于开发的数值。  </p>
+<p>　　这整个过程，设计师做iOS尺寸图并标注，设计师调整iOS尺寸图为Android尺寸并标注px，Android开发看着设计师交付的标注，再将其换算成dp，很长的一个过程。<br>　　<br>　　其实经过以上整个过程之后，我们已经得出了一个更简单的换算关系：<b>iOS像素尺寸 x 75%=Android像素尺寸，Android像素尺寸 x 2/3=Android的dp尺寸</b>。进而得出：<b>iOS像素尺寸 x 75% x 2/3=Android的dp尺寸</b>。所以，iOS里一个宽100px的东西，在Android的hdpi模式下，正好50dp，正好是50%，so easy？<br>　　<br>　　在这个关系的指导下，我们可以在同一套UI图上做适用于两个平台的标注。只要Android的开发知道，标注100px的东西，在hdpi模式下等于50dp这个换算关系，一切都简单了。当然，平台的区别要留意，例如iOS使用十进制色值，Android使用16进制，iOS可以绘制圆角和阴影，Android更倾向于用.9.png等。这些差异要在同一套标注中体现出来，让两端的开发各取所需。（如果你发现标注软件中无法在同一张图上标十进制和十六进制色值，你可以用文字标注替代其中一个，qq的截屏工具中也是带色值提示的，办法很多不再赘述。）   </p>
 
       
     </div>
@@ -275,11 +268,8 @@ ps,pt,dp,sp转换
     </div>
     
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-
   <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
   <script src="/js/main.js" type="text/javascript"></script>
-
 
   </div>
 </body>
